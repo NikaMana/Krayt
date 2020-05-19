@@ -1,0 +1,65 @@
+.features {
+  padding-top: 11rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.features .container {
+  padding-bottom: 7.5rem;
+  border-bottom: .2rem solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  @media (max-width: $tablet+px) {
+    justify-content: center;
+  }
+}
+.features__block {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  flex: 0 0 36rem;
+  margin: 1rem 0;
+
+  @media (orientation:portrait) {
+    flex-shrink: 1;
+  }
+  @media (max-width: $tablet+px) {
+    margin: 1.5rem;
+  }
+  @media (max-width: $mobile+px) {
+    margin: 1rem 0;
+  }
+}
+.block__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 7.5rem;
+  height: 7.5rem;
+  margin-right: 2.5rem;
+
+  flex: 0 0 7.5rem;
+  border-radius: 50%;
+  border: .1rem solid #eee;
+
+  font-size: 2.4rem;
+  color: #f31f79;
+}
+.block__content {
+  flex: 0 1 auto;
+}
+.content__header {
+  @include fontFamily(Dosis);
+  font-size: 2.4rem;
+  line-height: 3rem;
+  font-weight: 500;
+  margin: 0 0 2rem;
+}
+.content__desription {
+  margin: 0;
+}

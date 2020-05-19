@@ -1,0 +1,9 @@
+$content: 114rem;
+$tablet: 1139;
+$mobile: 739;
+$gradient: linear-gradient(90deg, #fd712c, #f21780);
+$transition-delay: .3s linear;
+
+@mixin fontFamily($font) {
+  font-family: $font, Arial, Helvetica, sans-serif;
+}

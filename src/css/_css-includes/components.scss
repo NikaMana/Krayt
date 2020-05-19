@@ -1,0 +1,88 @@
+//Button
+.button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1.4rem;
+  padding: 1.2rem 4rem;
+
+  box-sizing: border-box;
+  border-radius: 10rem;
+  border: .1rem solid #eee;
+
+  background-color: #fff;
+
+  align-self: center;
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+  transition: color $transition-delay;
+
+  &:after {
+    border-radius: 2rem;
+  }
+}
+
+// Round Button
+.round-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.4rem;
+  color: #777;
+
+  border-radius: 50%;
+  border: .1rem solid #eee;
+  box-sizing: border-box;
+
+  cursor: pointer;
+  transition: color $transition-delay,
+              box-shadow $transition-delay;
+
+  &:after {
+    border-radius: 50%;
+  }
+
+  &:hover {
+    box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .1);
+  }
+}
+.round-button_left {
+  margin-right: 5rem;
+  @media (orientation: portrait) {
+    margin-right: 0;
+  }
+  @media (max-width: ($tablet+160)+px) {
+    margin-right: 0;
+  }
+}
+.round-button_right {
+  margin-left: 5rem;
+  @media (orientation: portrait) {
+    margin-left: 0;
+  }
+  @media (max-width: ($tablet+160)+px) {
+    margin-left: 0;
+  }
+}
+
+// List
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.list__element {
+  display: flex;
+  align-items: baseline;
+  margin: 1rem 0;
+}
+.list__element .fa {
+  margin-right: 2rem;
+  font-size: 1.6rem;
+}

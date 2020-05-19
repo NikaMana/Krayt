@@ -1,0 +1,52 @@
+mixin card(header, icon, description)
+    .features__block
+        .block__icon
+            i(class= icon)
+        .block__content
+            p.content__header= header
+            p.content__desription= description
+
+
+section#features.features
+    .container
+        -
+            var header = 'Sell any product online'
+            var icon = 'fa fa-tags'
+            var description ='Over 92% of computers are infected with Adware and spyware. ' +
+            'Such software is rarely'
+        +card(header, icon, description)
+
+        -
+            header = 'Very easy to customize'
+            icon = 'fa fa-cog'
+            description ='Many of us are so used to working on a computer desktop that ' +
+            'when it comes time'
+        +card(header, icon, description)
+
+        -
+            header = 'Unlimited colors'
+            icon = 'fa fa-paint-brush'
+            description ='Audio player software is used to play back sound recordings ' +
+            'in one of the many'
+        +card(header, icon, description)
+
+        -
+            header = 'Responsive, HTML5, CSS3'
+            icon = 'fa fa-fire-extinguisher'
+            description ='Computers have become ubiquitous in almost every facet of ' +
+            'our lives. At work, desk'
+        +card(header, icon, description)
+
+        -
+            header = 'Designed to convert'
+            icon = 'fa fa-file-text-o'
+            description ='If you are looking for a new way to promote your business ' +
+            'that won’t cost you more'
+        +card(header, icon, description)
+
+        -
+            header = 'With no boundaries'
+            icon = 'fa fa-life-ring'
+            description ='Now, if you are interested in being the best player, ' +
+            'getting really good money and'
+        +card(header, icon, description)

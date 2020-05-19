@@ -1,0 +1,59 @@
+.banner {
+  padding: 20.5rem 0;
+  color: #fff;
+  background: $gradient;
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: $tablet+px) {
+    padding: 22rem 0 5rem;
+  }
+}
+.banner .container {
+  box-sizing: border-box;
+}
+.banner .col-2 {
+  position: relative;
+  z-index: 2;
+  max-width: 50rem;
+}
+.banner p {
+  margin-bottom: .4rem;
+}
+.button-container {
+  margin-top: 2rem;
+  align-self: flex-start;
+  padding: .5rem;
+  border-radius: 10rem;
+  background: rgba(0, 0, 0, .1);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .1);
+}
+.banner figure {
+  display: block;
+  width: 87.9rem;
+  height: 62.8rem;
+  background: url("../img/banner_bg.png") no-repeat;
+  background-size: 87.9rem 62.8rem;
+  position: absolute;
+  right: -4rem;
+  z-index: 1;
+
+  margin-top: -44rem;
+  margin-bottom: -15rem;
+  margin-left: 50rem;
+
+  @media (max-width: 1700px) {
+    position: relative;
+    margin-top: -44rem;
+    margin-bottom: -15rem;
+    margin-left: 50rem;
+  }
+
+  @media (max-width: $content/2) {
+    margin: 0 1rem;
+    width: 100%;
+    height: 70vw;
+    background-size: contain;
+    background-position: 100% 100%;
+  }
+}

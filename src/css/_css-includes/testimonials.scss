@@ -1,0 +1,92 @@
+.testimonials {
+  padding: 11rem 0 9rem;
+}
+.testimonials .gallery {
+  margin-top: 4rem;
+}
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (orientation: portrait) {
+    flex-direction: column;
+  }
+}
+.gallery .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery__button-block {
+  display: flex;
+  flex: 1 1 6rem;
+  align-items: flex-end;
+
+  @media (max-width: ($tablet+160)+px) {
+    position: absolute;
+    z-index: 1;
+    right: 1rem;
+  }
+}
+.gallery__button-block:nth-child(1) {
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  @media (max-width: ($tablet+160)+px) {
+    right: auto;
+    left: 1rem;
+  }
+}
+
+.feedback__card {
+  flex-shrink: 1;
+  flex-grow: 1;
+  max-width: 36rem;
+  padding: 4rem;
+  box-sizing: border-box;
+  background-color: #f7fafc;
+  margin: 3rem 0;
+
+  @media (orientation: portrait) {
+    margin: 1.5rem;
+  }
+  @media (max-width: $mobile+px) {
+    margin: 1.5rem 0;
+  }
+}
+.feedback__card_current {
+  background-color: #fff;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .1);
+
+  @media (orientation:landscape) {
+    margin: 0 3rem;
+  }
+}
+.feedback__card p {
+  margin: 0;
+}
+.feedback__person{
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+.feedback__avatar {
+  flex: 0 0 8rem;
+  width: 8rem;
+  height: 8rem;
+  margin-right: 2rem;
+  border-radius: 50%;
+}
+.feedback__name {
+  @include fontFamily(Dosis);
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin: 0;
+}
+.feedback__company {
+  margin-bottom: 0;
+  margin-top: .2rem;
+}

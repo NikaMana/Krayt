@@ -1,0 +1,73 @@
+include components
+
+mixin card(header, price, description)
+    .card
+        p.card__header= header
+
+        .card__price
+            sup $
+            = price
+            sub /m
+            .card__price-bg
+
+        .card__description
+            ul
+                each position in description ? description : ['There are no description']
+                    li= position
+
+        p.card__action Start Free Trial
+        +button('Buy Now')
+
+
+
+section#pricing.pricing
+    .container
+        h2 We've got the perfect package for you
+        p.center.
+            Everyone’s reasons for learning user interface design are different.
+            If you’re already a developer, or a PM, or a UX designer, why
+            develop this totally separate skill?
+        .price__cards
+            -
+                var header='Basic'
+                var price='12.0'
+                var description=[
+                    'One User',
+                    'Multiple Access',
+                    'SMS Support',
+                    '24/7 Online Support'
+                ]
+            +card(header, price, description)
+
+            -
+                header='Standard'
+                price='24.0'
+                description=[
+                    'Five User',
+                    'Multiple Access',
+                    'SMS Support',
+                    '24/7 Online Support'
+                ]
+            +card(header, price, description)
+
+            -
+                header='Premium'
+                price='250.0'
+                description=[
+                    'Twenty User',
+                    'Multiple Access',
+                    'SMS Support',
+                    '24/7 Online Support'
+                ]
+            +card(header, price, description)
+
+            -
+                header='Enterprise'
+                price='999.0'
+                description=[
+                    'Unlimited User',
+                    'Multiple Access',
+                    'SMS Support',
+                    '24/7 Online Support'
+                ]
+            +card(header, price, description)

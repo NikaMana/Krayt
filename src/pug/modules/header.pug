@@ -1,0 +1,20 @@
+include components
+
+mixin link(text)
+    if text === 'Home'
+        a.header__link(href='/')= text
+    else if text === 'Download'
+        a.header__link(href= '#' + text.toLowerCase())
+            +button('Download Now')
+    else
+        a.header__link(href= '#' + text.toLowerCase())= text
+
+header.header.container
+    a(href='/').header__logo
+        img(src='img/logo.svg', alt='Logo')
+        | Giant
+    nav.header__menu
+        +link('Home')
+        +link('Features')
+        +link('Pricing')
+        +link('Download')

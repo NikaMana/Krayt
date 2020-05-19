@@ -1,0 +1,23 @@
+include components
+
+mixin screenshots()
+    -var n = 1;
+    while n <= 7
+        .screenshot
+            img(src='img/screen_'+ n++ +'.png')
+
+section.screenshots
+    .container
+        h2 Take a look at our screenshots
+        p.center.
+            Everyone’s reasons for learning user interface design
+            are different. If you’re already a developer, or a PM,
+            or a UX designer, why develop this totally separate skill?
+    .gallery
+        .gallery__button-block
+            +roundButton('left')
+        .container
+            +screenshots()
+
+        .gallery__button-block
+            +roundButton('right')

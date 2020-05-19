@@ -1,0 +1,62 @@
+include components
+
+mixin feedback(text, avatar, person, company, current)
+    if current
+        .feedback__card.feedback__card_current
+            p= text
+            .feedback__person
+                img(src='img/' + avatar + '.jpg').feedback__avatar
+                .feedback__author
+                    p.feedback__name= person
+                    p.feedback__company= company
+    else
+        .feedback__card
+            p= text
+            .feedback__person
+                img(src='img/' + avatar + '.jpg').feedback__avatar
+                .feedback__author
+                    p.feedback__name= person
+                    p.feedback__company= company
+
+
+section.testimonials
+    .container
+        h2.testimonials__header What our customers are saying
+        p.center.
+            Everyone’s reasons for learning user interface design are different.
+            If you’re already a developer, or a PM, or a UX designer, why develop
+            this totally separate skill?
+    .gallery
+        .gallery__button-block
+            +roundButton('left')
+        .container
+            -
+                var text = 'The JustLanded for WordPress theme is great, '+
+                    'super easy to use and to customize and the support '+
+                    'is just awesome: super fast and reliable.'
+                var avatar = 'alexandra_avatar'
+                var person = 'Alexandra Bullock'
+                var company = 'Apple Inc.'
+            +feedback(text, avatar, person, company)
+
+            -
+                text = 'Very happy with the theme and incredibly easy to configure, '+
+                    'well done! I cannot emphasize how awesome this theme and ' +
+                    'developer support are.'
+                avatar = 'gary_avatar'
+                person = 'Gary Sebastian'
+                company = 'Apple Inc.'
+                current = true
+            +feedback(text, avatar, person, company, current)
+
+            -
+                text = 'Definitely a great theme and the support team are fantastic. ' +
+                    'Customer support is numero uno and ShapingRain have got this ' +
+                    'spot on. Cheers guys.'
+                avatar = 'samantha_avatar'
+                person = 'Samantha Bilbau'
+                company = 'Apple Inc.'
+            +feedback(text, avatar, person, company)
+
+        .gallery__button-block
+            +roundButton('right')

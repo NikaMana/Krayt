@@ -1,0 +1,146 @@
+$cardColor: #f7fafc;
+
+.pricing {
+  padding: 11rem 0 10rem;
+  overflow: hidden;
+}
+.price__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 5rem -1.5rem 0;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+
+  flex: 0 1 26.2rem;
+
+  background-color: $cardColor;
+  margin: 1.5rem;
+  text-align: center;
+  box-sizing: border-box;
+  padding-bottom: 4rem;
+  cursor: default;
+  transition: background-color $transition-delay,
+              box-shadow $transition-delay;
+
+  &:hover {
+    background-color: #fff;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .1);
+
+    .card__price::before,
+    .card__price::after {
+      background-color: #fff;
+    }
+    .card__price {
+      color: #fff;
+    }
+    .card__price-bg {
+      opacity: 1;
+    }
+  }
+}
+.card__header {
+  @include fontFamily(Dosis);
+  font-size: 2rem;
+  font-weight: 400;
+}
+.card__price {
+  @include fontFamily(Dosis);
+  font-size: 4.8rem;
+  font-weight: 500;
+  background-color: #fff;
+  padding: 3rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color $transition-delay;
+}
+.card__price-bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $gradient;
+  opacity: 0;
+  transition: opacity $transition-delay;
+}
+
+.card__price sup {
+  font-size: 1.8rem;
+}
+.card__price sub {
+  font-size: 1.8rem;
+  vertical-align: baseline;
+}
+.card__price::after,
+.card__price::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -4rem;
+  background-color: $cardColor;
+  width: 58%;
+  height: 4rem;
+  transition: background-color $transition-delay;
+}
+.card__price::after {
+  right: 50%;
+  transform-origin: 100% 100%;
+  transform: rotateZ(17deg);
+}
+.card__price::before {
+  left: 50%;
+  transform-origin: 0 0;
+  transform: rotateZ(-17deg);
+}
+
+.card__description {
+  font-size: 1.4rem;
+  color: #777;
+}
+.card__description ul{
+  margin: 3rem 0;
+  padding: 0 3.4rem;
+  list-style-type: none;
+}
+.card__description li{
+  margin: 0;
+  padding: .5rem 0;
+  border-bottom: .1rem dashed #eee;
+}
+.card__description li:last-child{
+  border-bottom: none;
+}
+
+.card__action {
+  font-weight: 300;
+  color: #aaa;
+  margin-top: 0;
+}
+
+.card__button {
+  padding: 1.2rem 4rem;
+  font-weight: 500;
+
+  box-sizing: border-box;
+  border-radius: 2rem;
+  border: .1rem solid #eee;
+
+  background-color: #fff;
+
+  align-self: center;
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+  transition: color $transition-delay;
+
+  &:after {
+    border-radius: 2rem;
+  }
+}

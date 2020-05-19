@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1;
+  transform: translate(-50%);
+  top: 1rem;
+  left: 50%;
+  width: 100%;
+}
+.header__logo {
+  @include fontFamily(Dosis);
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+.header__logo img {
+  width: 4.8rem;
+  height: 4rem;
+}
+.header__menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+.header__link {
+  padding: 1rem;
+  margin: 1.5rem 2rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: .1rem solid transparent;
+  transition: border $transition-delay;
+
+  &:hover {
+    border-color: #fff;
+  }
+  @media (max-width: $tablet+px) {
+    margin: 1.5rem;
+  }
+}
+.header__link[href='#download'] {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  text-decoration: none;
+  border: none;
+}
+.header__link button {
+  padding: 1rem 3rem;
+}

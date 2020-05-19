@@ -1,0 +1,17 @@
+mixin roundButton(direction)
+    if direction==='left'
+        .gradient-button.round-button.round-button_left
+            i.fa.fa-long-arrow-left
+    else
+        .gradient-button.round-button.round-button_right
+            i.fa.fa-long-arrow-right
+
+mixin list(elements)
+    ul.list
+        each element in elements ? elements : ['There are no elements']
+            li.list__element
+                i.fa.fa-check-circle
+                span= element
+
+mixin button(text)
+    button.button.gradient-button= text

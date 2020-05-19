@@ -1,0 +1,42 @@
+.video {
+  position: relative;
+  height: 40rem;
+  overflow: hidden;
+}
+.video video {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.video__play {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 7.5rem;
+  width: 7.5rem;
+  font-size: 3rem;
+  color: #777;
+  background-color: #fff;
+
+  border-radius: 50%;
+  border: none;
+
+  cursor: pointer;
+  transition: color $transition-delay;
+
+  &:after {
+    border-radius: 50%;
+    border: none;
+  }
+}
+.video__play .fa {
+  margin-left: .5rem;
+}
